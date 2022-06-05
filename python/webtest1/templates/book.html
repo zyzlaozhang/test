@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>搜索</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <script>
+            
+              
+            function filter_ptags_on_images($content){
+   return preg_replace('/\<th\b.*?\>(.+)\<\/th\>/i', '$1', $content);
+}
+     
+    </script>
+    <div class="input-group mb-3">
+        <blockquote class="blockquote">
+          
+        </br>
+        <p>   </p>
+        </blockquote>  
+    </br>
+           <form action="/search">
+            <h3 >搜索</h3>
+              
+              <input name="wvrd"class="form-control"  style='width:1500px;outline-color:black;outline-width:20px' id="txt">
+              
+              
+              <div class="input-group-append">
+                  <button class="btn btn-success" type="submit">搜索</button>  
+              </div>
+          
+          </form>
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>题目</th>
+                    <th>作者</th>
+                    <th>内容</th>
+                  </tr>
+            </thead>
+        {%for x in word%}
+        
+            <tbody>
+                <tr>
+        <td>{{x["题目"]}}</td>
+        <td>{{x["作者"]}}</td>
+        <td>{{x["内容"]}}</td>
+                </tr>
+            </tbody>
+        {%endfor%}
+    </table>
+</body>
