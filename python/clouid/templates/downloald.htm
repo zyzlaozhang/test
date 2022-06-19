@@ -1,0 +1,31 @@
+
+<html>
+	<head>
+	
+		<title>download</title>
+	
+	</head>
+	
+	<body>
+	
+		<form  action = "/download" method = "post" >
+	
+			<input type="text" name="word"/>
+	
+			<input type = "submit" value="download">
+	
+		</form>
+		<table>
+		{% for i in name %}
+		<tbody>
+			<tr>
+				<td>{{i}}</td>
+				<br>
+			</tr>
+		</tbody>
+		{%endfor%}
+	</table>
+	
+	</body>
+	
+	</html>
