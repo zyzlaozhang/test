@@ -15,16 +15,15 @@ coll = db.get_collection("namedb")
 find_post = coll.find_one({'_id' : '10'})
 for key,value in find_post.items():
     ke.clear()
-    ke.append(key)
-    ke.append(value)
+    ke.extend((key, value))
     print(ke)
     i=1
     l=l+1
     for i in range(len(ke)):
-        
+
         print(ke[i])
-        
+
         sheet.write(l,i,ke[i])
-    
-savepath = 'D:\\excel表格2.xls'
+
+savepath = 'D:\\excel表格3.xls'
 book.save(savepath)

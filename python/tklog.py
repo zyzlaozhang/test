@@ -4,7 +4,7 @@ import pymongo
 from tkinter import messagebox,Toplevel
 client = pymongo.MongoClient(host= '127.0.0.1', port=27017)
 db = client.testdb
-coll = db.get_collection("namedb")
+coll = db.get_collection("userdb")
 result=""
 
 
