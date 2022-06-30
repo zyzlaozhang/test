@@ -21,15 +21,50 @@
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </head>
 <body>
+  <div class="container">
+      
+    <ul class="nav nav-pills nav-justified">
+      <li class="nav-item">
+         
+        <a class="nav-link" href='/'>主页</a>
+      </li>
+      <li class="nav-item">
+       
+        <a class="nav-link"  href='/register'>注册</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"href='/longin'>登录</a>
+      </li>
+     
+      <li class="nav-item">
+        <a class="nav-link" href="/logout">注销</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/singout">登出</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/search">搜索</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/wriet">分享</a>
+      
+      </li>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link "target="black" href="/userindex">个人主页</a>
+    </li>
+    </ul>
+  </div>
     
       <blockquote class="blockquote">
         <h3 >分享</h3>
-        <p>请用\n换行</p> 
+        <p>请用\r\n换行或enter换行</p> 
       </blockquote>
     <div class="input-group mb-3">
        
         <br>
-         <form action="/wriet">
+         <form action="/wriet", method = "post">
+         
             <p>题目</p>
             <input name="ord" class="form-control" id="txt" style='width:1500px;outline-color:black;outline-width:20px'>
             <p>内容</p>

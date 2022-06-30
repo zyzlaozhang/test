@@ -98,10 +98,9 @@ def html():
     def bianxie():
         html1=simpledialog.askstring('wendang',"输入文件名")
         html1="D:\\"+html1+".html"
-        f = open(html1,'w')
-        message = ent.get("1.0","end")
-        f.write(message)
-        f.close()
+        with open(html1,'w') as f:
+            message = ent.get("1.0","end")
+            f.write(message)
         web.open(html1,new = 1)
     def chru():
         nome=simpledialog.askstring('文档',"输入你要插入的文档的名称")
@@ -148,7 +147,7 @@ def liulan():
         web.open(url)
 def shijian():
     time=strftime(":%d:%H:%M")
-    messagebox.showinfo(title = "时间", message = "本地时间是"+time)
+    messagebox.showinfo(title = "时间", message=f"本地时间是{time}")
 def no():
     messagebox.showwarning(title = "404 not found", message = "程序未开发")
 def shezhi():
@@ -263,44 +262,34 @@ def jisuan():
 
         wi=wi+y
         entnc.delete("0","end")
-        
-        
-        
         entnc.insert("0",wi)
-       
-        return wi
-        return x
+        return wi,x
     def clear():
         global x
         global wi
         global y
         entnc.delete("0","end")
-        
         wi=""
-        x=1 
+        x=1
         y=""
         return x,wi,y
-        return wi
-        return y
     def jisuan():
         global wi
         global j
         try:
             try:
-                
+
                 j=eval(wi)
-                
+
             except ZeroDivisionError :
                 messagebox.showerror('错误提示', '请勿将x/0')
-            else:
-                pass
         except SyntaxError or  ZeroDivisionError:
             messagebox.showerror('错误提示', '请输入有效算式')
         else:
             try:
-                
+
                 j=eval(wi)
-                
+
             except ZeroDivisionError :
                 messagebox.showerror('错误提示', '请输入有效算式')
             else:
@@ -308,11 +297,8 @@ def jisuan():
                 j=eval(wi)
                 entnc.delete("0","end")
                 entnc.insert("0",j)
-                
+
                 return j
-                y=""
-                return wi
-                return y
         
     nbtn= tkinter.Button(roont, text='c',background="red",width=2, height=1,activebackground="red",activeforeground="white"  ,font=(None, 15), command=lambda: clear())
 

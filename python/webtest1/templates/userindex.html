@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>个人主页</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+    </style> -->
+    
+</head>
+<body>
+  
+  <div class="container">
+    <ul class="nav nav-pills nav-justified">
+      <li class="nav-item">
+         
+        <a class="nav-link" href='/'>主页</a>
+      </li>
+      <li class="nav-item">
+       
+        <a class="nav-link"  href='/register'>注册</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"href='/longin'>登录</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"href="/logout">注销</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link", href="/singout">登出</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/search">搜索</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/wriet">分享</a>
+      
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/userindex">个人主页</a>
+      </li>
+    </ul>
+  </div>
+    
+    
+  
+     <div class="container">
+        <h2>个人主页</h2>
+        
+        <div class="card img-fluid" style="width:500px">
+          <img class="card-img-top" src=" http://static.runoob.com/images/mix/img_avatar.png"alt="Card image" style="width:100%">
+          <div class="card-img-overlay">
+            <h4 class="card-title">{{namee}}</h4>
+            <p class="card-text">密码{{passworde}}</p>
+            <a href="#" class="btn btn-primary">我的作品</a>
+          </div>
+        </div>
+      </div>
+      <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>题目</th>
+                
+                <th>内容</th>
+              </tr>
+        </thead>
+    {%for x in wordlist%}
+    
+        <tbody>
+            <tr>
+              <td>{{x["题目"]}}</td>
+    
+              <td>{{x["内容"]}}</td>
+            </tr>
+        </tbody>
+    {%endfor%}
+       </table>
+      <div id="#">
+        <div style="text-align:center">
+          <blockquote class="blockquote">
+            <h3 >end</h3>
+          </blockquote></div>
+      </div>
+  
+</body>

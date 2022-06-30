@@ -23,6 +23,40 @@
   <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
+    <div class="container">
+      
+        <ul class="nav nav-pills nav-justified">
+          <li class="nav-item">
+             
+            <a class="nav-link" href='/'>主页</a>
+          </li>
+          <li class="nav-item">
+           
+            <a class="nav-link"  href='/register'>注册</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"href='/longin'>登录</a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">注销</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/singout">登出</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/search">搜索</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/wriet">分享</a>
+          
+          </li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/userindex">个人主页</a>
+        </li>
+        </ul>
+      </div>
     <script>
             
               
@@ -38,7 +72,7 @@
         <p>   </p>
         </blockquote>  
     </br>
-           <form action="/search">
+           <form action="/search", method = "post">
             <h3 >搜索</h3>
               
               <input name="wvrd"class="form-control"  style='width:1500px;outline-color:black;outline-width:20px' id="txt">

@@ -1,0 +1,12 @@
+@host = 120.48.83.141:5000
+
+///退出登录
+# 请求URL:http://{{host}}/v1/user/logout
+# 请求参数: 
+# 响应参数
+    #  {
+    #   }
+###############################################
+
+get  http://{{host}}/singout  HTTP/1.1
+content-type: application/json
